@@ -6,7 +6,7 @@ function persistence(num, count=0) {
     if(count == 0 && num < 10) return count;
     count++;
   
-    let nums = parseInt(num).toString().split('');
+    let nums = `${num}`.split(''); // template to stringify a number
     let result = 1;
     nums.forEach(num => result *= parseInt(num));
     
