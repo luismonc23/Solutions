@@ -10,4 +10,12 @@
 function rowSumOddNumbers(n) {
 	// TODO
   let nthRowStart = 1 + (n*(n-1));
+  let nthRowNumberOfElements = n;
+  let totalSum = nthRowStart;
+  
+  for(i= 1; i<nthRowNumberOfElements; i++){
+    nthRowStart+=2;
+    totalSum+=nthRowStart;
+  }
+  return totalSum;
 }
