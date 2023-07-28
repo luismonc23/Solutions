@@ -3,26 +3,16 @@
 
 function persistence(num, count=0) {
     //code me
-    if(count == 0 && num < 10) return count;
+    if(count == 0 && num < 10) return count; //The number starts as a single digit number
     count++;
   
     let nums = `${num}`.split(''); // template to stringify a number
     let result = 1;
-    nums.forEach(num => result *= parseInt(num));
+    nums.forEach(num => result *= parseInt(num)); //sums the numbers
     
     if(result < 10) 
-        return count;
+        return count; //reached single digit
     else {
-      //if(count == 0) count = 1;
-      return persistence(result, count);
+      return persistence(result, count); //try again with the result, and add to the count
     }
-        
-   //for(i=0; i<parseInt(num).toString().length; i++) {
-        //result = 
-       //if(result < 10){    
-        //return count;
-       //} else {
-        //count++;
-       //}
-    //}
 }
