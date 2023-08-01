@@ -4,8 +4,8 @@
   
 function validatePIN (pin) {
   if(pin.length == 4)
-    return RegExp("(^[0-9]{4}$)").test(pin);
+    return RegExp("(^[0-9]{4}$)").test(pin); //Means it will match in the whole string, a number[0-9] exactly 4 times
   if(pin.length == 6)
-    return RegExp("(^[0-9]{6}$)").test(pin);
-  else return false;
+    return RegExp("(^[0-9]{6}$)").test(pin); //Means it will match in the whole string, a number[0-9] exactly 6 times
+  else return false; //No match or incorrect length
 }
