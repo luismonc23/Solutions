@@ -7,7 +7,11 @@ function DNAStrand(dna){
   let chars = dna.split('');
   
   let newChars = chars.map(function(a){
-    return a == "A" ? "T" : (a == "T" ? "A" : (a == "G" ? "C" : "G"));
+    return a == "A" ? "T" : (a == "T" ? "A" : (a == "G" ? "C" : "G")); //Validation a bit complex, could be replaced with an array or object with key A, G, C and T
+    // { "A" : "T",
+    //   "T": "A",
+    //   "G": "C",
+    //   "C": "G" }
   });
   return newChars.join('');
 }
