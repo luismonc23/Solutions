@@ -6,15 +6,17 @@ function createPhoneNumber(numbers){
     let finalPhone = "(";
   for(i = 0; i<numbers.length; i++){
       let num = numbers[i];
-    if(i<3){ finalPhone += num.toString() }
+    if(i<3){ 
+        finalPhone += num.toString(); //First three numbers: 123
+      }
       else if(i == 3){
-          finalPhone += ") "+num.toString()
+          finalPhone += ") "+num.toString();//Fourth number: ) 4
       } else if(i>3 && i<6){
-          finalPhone += num.toString();
+          finalPhone += num.toString(); //Next two numbers: 56
       } else if(i == 6){
-          finalPhone += "-"+num.toString();
+          finalPhone += "-"+num.toString();//Seventh number: -7
       } else {
-          finalPhone += num.toString();
+          finalPhone += num.toString(); //Last numbers 890
       }
   }
     return finalPhone;
